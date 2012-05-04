@@ -41,17 +41,19 @@
 
         <requestFocus />
     </EditText>
-
+
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/loginButton"
+        android:layout_width="93dp"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:text="Log In" />
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>
