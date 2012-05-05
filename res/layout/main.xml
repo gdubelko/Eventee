@@ -40,8 +40,7 @@
         android:inputType="textPassword" >
 
         <requestFocus />
-    </EditText>
-
+    </EditText>
     <Button
         android:id="@+id/loginButton"
         android:layout_width="93dp"

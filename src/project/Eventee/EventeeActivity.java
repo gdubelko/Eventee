@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EventeeActivity extends Activity {
-    /** Called when the activity is first created. */
+public class EventeeActivity extends Activity 
+{
+    
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) 
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
@@ -19,6 +21,16 @@ public class EventeeActivity extends Activity {
             {
             	setContentView(R.layout.seek);
             }
-          });
-      }
-  }
+        });
+        
+     }
+    public void onStart()
+    {
+    	super.onStart();
+    }
+    
+    public void onStop()
+    {
+    	super.onStop();
+    }
+}

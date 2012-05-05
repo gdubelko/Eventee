@@ -34,6 +34,16 @@ public void onCreate(Bundle savedInstanceState) {
     tabHost.setCurrentTab(2);
 }
 
+public void onStart()
+{
+	super.onStart();
+}
+
+public void onStop()
+{
+	super.onStop();
+}
+
 private TabHost getTabHost() {
 	// TODO Auto-generated method stub
 	return null;
