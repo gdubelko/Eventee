@@ -1,36 +1,30 @@
 package project.Eventee;
 
+import android.R.string;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class EventeeActivity extends Activity 
 {
-    
+    static final private int LOAD_ACCOUNT = 0;
+	
+	
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
-        final Button button = (Button) findViewById(R.id.loginButton);
-        button.setOnClickListener(new View.OnClickListener() 
-        {
-            public void onClick(View v)
-            {
-            	setContentView(R.layout.seek);
-            }
-        });
-        
+       
      }
-    public void onStart()
-    {
-    	super.onStart();
-    }
     
-    public void onStop()
+    public void buttonClickHandler(View target)
     {
-    	super.onStop();
+    	Intent appProcess = new Intent(this, project.Eventee.SeekActivity.class);
+    	startActivityForResult(appProcess, LOAD_ACCOUNT);
+    	
     }
+   
 }

@@ -11,7 +11,7 @@ public class ContactsActivity extends Activity {
 
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
+    setContentView(R.layout.events_contacts);
 
     Resources res = getResources(); 
     TabHost tabHost = getTabHost();  

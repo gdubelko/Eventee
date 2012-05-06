@@ -11,7 +11,7 @@ public class MeActivity extends Activity {
 
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
+    setContentView(R.layout.me);
 
     Resources res = getResources(); // Resource object to get Drawables
     TabHost tabHost = getTabHost();  // The activity TabHost
