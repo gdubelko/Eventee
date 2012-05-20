@@ -1,0 +1,14 @@
+Where we are at:
+
+-UI framework set up
+-BeamActivity set up
+
+
+
+
+Need to do:
+-Concantenation/tokenizer methods for strings sent over nfc(since you can only send a string)
+-ListView or scrollView for contact storage
+
+***Need to prepare testing(Tuesday?), think of possible errors and such, maybe provide different code solutions for
+possible problems***

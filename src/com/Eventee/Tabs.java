@@ -5,13 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+<<<<<<< HEAD
 import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.Toast;
+=======
+import android.widget.TabHost;
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
 import android.widget.TabHost.TabSpec;
 
 /**
  * Corresponds to Main.xml
+<<<<<<< HEAD
  */
 public class Tabs extends Activity
 {
@@ -20,6 +25,18 @@ public class Tabs extends Activity
 	String myString = null;
     
 	
+=======
+ * 
+ * @author Gregory
+ *
+ */
+public class Tabs extends Activity
+{
+	Button exchange; 
+	int numContacts; //Number of contacts (might be useful later, for expanadblelist, or scrollview)
+	String myString = null;
+
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -28,7 +45,11 @@ public class Tabs extends Activity
         
         TabHost appTabs = (TabHost) findViewById (R.id.tabhost);
         
+<<<<<<< HEAD
         //BUTTON(Exchange)::Runs Beam processes
+=======
+        //Exchange button
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
         exchange = (Button) findViewById(R.id.Button_Exchange);
         exchange.setOnClickListener(new View.OnClickListener() 
         {
@@ -40,6 +61,7 @@ public class Tabs extends Activity
 			}
 		});
         
+<<<<<<< HEAD
         
         //EditTexts instantiated
         name = (EditText) findViewById(R.id.Input_Name);
@@ -65,6 +87,8 @@ public class Tabs extends Activity
         		
         
 
+=======
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
         appTabs.setup();
         //tab1: Exchange
         TabSpec specs = appTabs.newTabSpec("tag1");

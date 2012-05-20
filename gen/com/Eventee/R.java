@@ -17,7 +17,10 @@ public final class R {
     public static final class id {
         public static final int Button_Exchange=0x7f060003;
         public static final int Button_Ok=0x7f060000;
+<<<<<<< HEAD
         public static final int Button_SaveMe=0x7f06000f;
+=======
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
         public static final int Contacts=0x7f060004;
         public static final int Exchange=0x7f060002;
         public static final int Input_Email=0x7f06000c;
@@ -40,12 +43,18 @@ public final class R {
         public static final int app_name=0x7f040000;
         public static final int email=0x7f040004;
         public static final int exchange=0x7f040005;
+<<<<<<< HEAD
         public static final int myString=0x7f040008;
+=======
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
         public static final int name=0x7f040001;
         public static final int network=0x7f040002;
         public static final int ok=0x7f040006;
         public static final int phone=0x7f040003;
+<<<<<<< HEAD
         public static final int save=0x7f040007;
+=======
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
     }
     public static final class style {
         public static final int Blue_Font=0x7f050000;

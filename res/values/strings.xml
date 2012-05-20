@@ -8,8 +8,11 @@
  	<string name="email">Email</string>
  	<string name="exchange">Exchange</string>
 	<string name="ok">OK</string>
+<<<<<<< HEAD
 	<string name="save">Save</string>
 	<string name="myString"></string>
+=======
+>>>>>>> 5e7be1e88bc90deee9af7ace39c95098b84a4d61
 
     <style name="Blue_Font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">#84B4E4</item>
