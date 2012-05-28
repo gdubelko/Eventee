@@ -77,17 +77,17 @@ public class Tabs extends ListActivity
         {
             public void onClick(View view)
             {
-            	Contact them = new Contact();
-            	String [] temp = otherString.split("^");
-    			if (temp.length >1)
-    			{
-    				them.setContactName(temp[0]);
-                    them.setContactDetails( temp[1]+"/"+temp[2]+"/"+temp[3]);
-    			}
+            	Contact them;
+				try {
+					them = new Contact("Greg Dubelko^OSU^greg.dubelko@gmail.com^440-773-2824");
+				} catch (Exception e) {
+					Log.e("13", "error formulating a contact from Exchange");
+					e.printStackTrace();
+					them = new Contact();
+				}
 				m_contacts.add(them);
                 m_adapter.add(them);
                 m_adapter.notifyDataSetChanged();
-				
             }
         });   
         //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

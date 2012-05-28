@@ -1,5 +1,7 @@
 package com.Eventee;
 
+import android.util.Log;
+
 public class Contact 
 {
 	private String name;
@@ -7,13 +9,8 @@ public class Contact
 	
 	public Contact(String s) throws Exception 
 	{
-		if (s.length() == 0 || s == null)
-		{
-			throw new Exception("Failed to pass a correct string.");
-		}
-		else 
-		{
-			String [] temp = s.split("^");
+			String [] temp = s.split("\\^");
+			Log.i("2", temp[0]+" & "+temp[1]);
 			if (temp.length >1)
 			{
 				this.name = temp[0];
@@ -23,7 +20,6 @@ public class Contact
 			{
 				throw new Exception("Malformed string constructor.");
 			}
-		}
 	}
 	
 	public Contact() 
