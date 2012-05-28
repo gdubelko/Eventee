@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -110,7 +111,19 @@ public class BeamActivity extends Activity implements CreateNdefMessageCallback,
         NdefMessage msg = (NdefMessage) rawMsgs[0];
 
         // record 0 contains the MIME type, record 1 is the AAR, if present
-        stringTest.setText(new String(msg.getRecords()[0].getPayload()));
+        String contactDetails = new String(msg.getRecords()[0].getPayload());
+        Contact newContact;
+        try {
+			newContact = new Contact(contactDetails);
+			Tabs.m_contacts.add(newContact);
+			Tabs.m_adapter.add(newContact);
+	        Tabs.m_adapter.notifyDataSetChanged();
+		} catch (Exception e) {
+			Log.e("66", "malformed or incorrect string");
+			//don't add it to the listview, but show an error state contact.
+			newContact = new Contact();
+		} 
+		stringTest.setText(newContact.getContactName() + "\n" + newContact.getContactDetails());
     }
 
     /**

@@ -33,8 +33,8 @@ import android.widget.TabHost.TabSpec;
 public class Tabs extends ListActivity
 {
     private ProgressDialog m_ProgressDialog = null;
-    private ArrayList<Contact> m_contacts = null;
-    ContactAdapter m_adapter;
+    protected static ArrayList<Contact> m_contacts = null;
+    protected static ContactAdapter m_adapter;
     private Runnable viewContacts, run;
 
     Button exchange, saveMe;
