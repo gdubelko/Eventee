@@ -51,7 +51,7 @@ public class Tabs extends ListActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);// displays main.xml
-
+        m_contacts = new ArrayList<Contact>();
         TabHost appTabs = (TabHost) findViewById (R.id.tabhost); //tabs container
 
         //EditTexts
@@ -81,6 +81,11 @@ public class Tabs extends ListActivity
                 myString = name.getText() + "^" + network.getText() + "^" + email.getText() + "^" + phone.getText();
                 Toast.makeText(getApplicationContext(), myString, Toast.LENGTH_LONG).show();  //Simple test----Remove Later..maybe
                 contactMap.put(myString, "itWorked");
+                Contact myself = new Contact();
+                myself.setContactName(name.getText()+"");
+                myself.setContactDetails(network.getText()+"");
+                m_contacts.add(myself);
+                m_adapter.add(myself);
                 m_adapter.notifyDataSetChanged();
             }
         });
@@ -192,7 +197,7 @@ public class Tabs extends ListActivity
         }
         runOnUiThread(returnRes);
     }
-    private class ContactAdapter extends ArrayAdapter<Contact>
+    protected class ContactAdapter extends ArrayAdapter<Contact>
     {
         private ArrayList<Contact> items;
 
